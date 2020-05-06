@@ -18,8 +18,15 @@ fn main() {
     dbg!(t1 < t2);
     dbg!(t1 < t3);
 
-    let combs = (0..5).combinations(3).collect::<Vec<_>>();
+    // 要素の重複なし組み合わせ nCr
+    // let combs = (0..5).combinations(3).collect::<Vec<_>>();
+    // for e in combs {
+    //     println!("{:?}", e);
+    // }
+
+    // 要素の重複あり組み合わせ (n + r - 1)Cr
+    let combs = (0..5).combinations_with_replacement(3).collect::<Vec<_>>();
     for e in combs {
-        dbg!(e);
+        println!("{:?}", e);
     }
 }
