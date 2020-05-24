@@ -1,4 +1,3 @@
-
 rust:
 	cargo run
 
